@@ -24,3 +24,15 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+const nightBtn = document.getElementById("night-mode-btn");
+
+nightBtn.addEventListener("click", () => {
+  document.body.classList.toggle("night-mode");
+
+  if (document.body.classList.contains("night-mode")) {
+    nightBtn.textContent = "回歸清晨日光";
+  } else {
+    nightBtn.textContent = "切換大稻埕夜色";
+  }
+});

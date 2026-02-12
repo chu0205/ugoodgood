@@ -133,3 +133,56 @@ footer {
   text-align: center;
   font-size: 0.8rem;
 }
+
+/* 夜色模式背景 */
+body.night-mode {
+  background-color: #1a1a1a !important;
+  color: #eee !important;
+  transition: all 0.5s ease;
+}
+
+/* 霓虹燈標題特效 */
+body.night-mode h1 {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #a52a2a,
+    0 0 40px #a52a2a,
+    0 0 80px #a52a2a;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* 模擬燈管閃爍動畫 */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #a52a2a,
+      0 0 40px #a52a2a;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    color: #444;
+  }
+}
+
+/* 按鈕樣式 */
+.fancy-btn {
+  background: var(--primary-color);
+  color: white;
+  border: 2px solid white;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
