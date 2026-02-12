@@ -1,11 +1,22 @@
-// 先測試按鈕到底有沒有被抓到
-const nightBtn = document.getElementById("night-mode-btn");
+console.log("緣滾滾 JS 已成功啟動！"); // 這行是用來在 Console 檢查有沒有動的
 
-if (nightBtn) {
-  nightBtn.addEventListener("click", () => {
-    alert("緣滾滾：霓虹燈啟動！"); // 如果按了會跳出視窗，代表這段有通
-    document.body.classList.toggle("night-mode");
-  });
-} else {
-  console.log("找不到按鈕，請檢查 ID 是否正確");
-}
+window.onload = function () {
+  const nightBtn = document.getElementById("night-mode-btn");
+
+  if (nightBtn) {
+    console.log("找到按鈕了！");
+    nightBtn.addEventListener("click", function () {
+      console.log("按鈕被點擊了！");
+      document.body.classList.toggle("night-mode");
+
+      // 同步切換按鈕文字
+      if (document.body.classList.contains("night-mode")) {
+        this.textContent = "回歸清晨日光";
+      } else {
+        this.textContent = "切換大稻埕夜色";
+      }
+    });
+  } else {
+    console.log("錯誤：找不到 ID 為 night-mode-btn 的按鈕");
+  }
+};
