@@ -52,15 +52,42 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>聯絡我們</h2>
-      <div class="contact-info">
-        <p>📍 地址：台北市大同區迪化街一段XXX號</p>
-        <p>⏰ 營業時間：11:00 - 19:00 (週一公休)</p>
-        <button class="btn" onclick="alert('預約功能即將上線！')">
-          立即線上預約
-        </button>
-      </div>
+    <section id="contact">
+      <h2>聯絡緣滾滾</h2>
+      <form action="https://formspree.io/f/xvzbkzqb" method="POST">
+        <div class="form-group">
+          <label>您的稱呼：</label>
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="例如：大稻埕阿滾"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>聯絡信箱：</label>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="example@gmail.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>想詢問的內容或預約時段：</label>
+          <textarea
+            name="message"
+            required
+            placeholder="請告訴我們您想燙印的款式或預約日期"
+          ></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display: none" />
+
+        <button type="submit" class="fancy-btn">送出訊息</button>
+      </form>
     </section>
 
     <footer>
