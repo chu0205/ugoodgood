@@ -53,40 +53,41 @@
     </section>
 
     <section id="contact">
-      <h2>聯絡緣滾滾</h2>
-      <form action="https://formspree.io/f/xvzbkzqb" method="POST">
+      <h2>預約緣份，滾動創意</h2>
+      <form action="https://formspree.io/f/你的FormID" method="POST">
         <div class="form-group">
-          <label>您的稱呼：</label>
+          <label for="name">您的稱呼</label>
           <input
             type="text"
+            id="name"
             name="name"
             required
-            placeholder="例如：大稻埕阿滾"
+            placeholder="例如：阿滾先生"
           />
         </div>
 
         <div class="form-group">
-          <label>聯絡信箱：</label>
+          <label for="email">聯絡信箱</label>
           <input
             type="email"
+            id="email"
             name="email"
             required
-            placeholder="example@gmail.com"
+            placeholder="hello@example.com"
           />
         </div>
 
         <div class="form-group">
-          <label>想詢問的內容或預約時段：</label>
+          <label for="message">想跟我們說的話</label>
           <textarea
+            id="message"
             name="message"
             required
-            placeholder="請告訴我們您想燙印的款式或預約日期"
+            placeholder="想詢問燙印款式或是預約大稻埕體驗時間嗎？"
           ></textarea>
         </div>
 
-        <input type="text" name="_gotcha" style="display: none" />
-
-        <button type="submit" class="fancy-btn">送出訊息</button>
+        <button type="submit" class="submit-btn">傳送暖心訊息</button>
       </form>
     </section>
 

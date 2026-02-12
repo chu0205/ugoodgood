@@ -191,3 +191,84 @@ body.night-mode {
   background-color: #1a1a1a !important;
   color: #eee !important;
 }
+
+/* 聯絡表單容器 */
+#contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 淡淡的質感陰影 */
+  border: 1px solid #f0e6d6; /* 暖色系邊框 */
+}
+
+#contact h2 {
+  text-align: center;
+  color: #8b4513; /* 焦糖棕色，更有手感 */
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* 輸入框群組 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 輸入框本體樣式 */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* 確保寬度不會爆開 */
+}
+
+/* 當滑鼠點進輸入框時的特效 */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #a52a2a; /* 緣滾滾的主色紅 */
+  outline: none;
+  box-shadow: 0 0 8px rgba(165, 42, 42, 0.2);
+}
+
+/* 讓 textarea 高度高一點 */
+.form-group textarea {
+  height: 120px;
+  resize: vertical; /* 允許用戶上下調整大小 */
+}
+
+/* 升級版按鈕 */
+.submit-btn {
+  width: 100%;
+  background-color: #a52a2a;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #800000;
+  transform: translateY(-2px); /* 輕微浮起感 */
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
