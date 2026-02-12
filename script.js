@@ -1,38 +1,11 @@
-// 簡單的平滑滾動效果
-document.querySelectorAll("nav a").forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    window.scrollTo({
-      top: targetElement.offsetTop - 70,
-      behavior: "smooth",
-    });
-  });
-});
-
-// 滑動顯示動畫 (可視區域觸發)
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      section.style.opacity = "1";
-      section.style.transform = "translateY(0)";
-    }
-  });
-});
-
+// 先測試按鈕到底有沒有被抓到
 const nightBtn = document.getElementById("night-mode-btn");
 
-nightBtn.addEventListener("click", () => {
-  document.body.classList.toggle("night-mode");
-
-  if (document.body.classList.contains("night-mode")) {
-    nightBtn.textContent = "回歸清晨日光";
-  } else {
-    nightBtn.textContent = "切換大稻埕夜色";
-  }
-});
+if (nightBtn) {
+  nightBtn.addEventListener("click", () => {
+    alert("緣滾滾：霓虹燈啟動！"); // 如果按了會跳出視窗，代表這段有通
+    document.body.classList.toggle("night-mode");
+  });
+} else {
+  console.log("找不到按鈕，請檢查 ID 是否正確");
+}
